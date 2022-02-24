@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rock-paper-scissor.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="r-pp-sc.js" defer></script>
+    </script>
+</head>
+<body class="bg-color">
+    <div class="d-flex justify-content-center game-title">
+        <h1>Rock, Paper and Scissor Game!</h1>
+    </div>
+    <div class="d-flex justify-content-center" id="optionSelection">
+        <button id="Rock">Rock</button>
+        <button id="Paper">Paper</button>
+        <button id="Scissor">Scissor</button>
+    </div>
+    <div class="d-flex justify-content-center game-title">
+        <h1 class="col-6 d-flex justify-content-center">Computer Choice</h1>
+        <h1 class="col-6 d-flex justify-content-center">Player Choice</h1>
+    </div>
+    <div class="d-flex justify-content-center game-title">
+        <h2 id="computerChoice" class="col-6 d-flex justify-content-center"></h2>
+        <h2 id="playerChoice" class="col-6 d-flex justify-content-center"></h2>
+    </div>
+    <div class="d-flex justify-content-center" id="result">
+        <h3 id="winner">Result</h3>
+    </div>
+    <div class="justify-content-center" id="score-board">
+        <div class="row">
+            <h3 class="text-center">Score Board</h3>
+        </div>
+        <div class="row">
+            <h4 class="col-6 d-flex justify-content-center">Computer Score</h4>
+            <h4 class="col-6 d-flex justify-content-center">Player Score</h4>
+        </div>
+        <div class="row">
+            <h5 class="col-6 d-flex justify-content-center" id="computerScore"></h5>
+            <h5 class="col-6 d-flex justify-content-center" id="playerScore"></h5>
+        </div>
+    </div>
+</body>
+</html>
