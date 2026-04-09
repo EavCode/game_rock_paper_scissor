@@ -1,46 +1,292 @@
-.bg-color{
-    background-color: #ab47bc;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.game-title{
-    margin: 2%;
-    padding: 1%;
-    color: white;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-wrapper {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+}
+
+.game-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(171, 71, 188, 0.8);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #a78bfa;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Choice buttons */
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.choices button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.choices button img {
+    width: 60px;
+    height: 60px;
+}
+
+.choices button span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d1d5db;
+}
+
+.choices button:hover {
+    transform: translateY(-6px) scale(1.05);
+    border-color: #a855f7;
+    box-shadow: 0 0 24px rgba(168, 85, 247, 0.5);
+    background: rgba(168, 85, 247, 0.15);
+}
+
+.choices button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Versus display */
+.versus-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px 16px;
+    backdrop-filter: blur(10px);
+}
+
+.choice-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.choice-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a78bfa;
+}
+
+.choice-icon {
+    font-size: 3rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.choice-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.vs-badge {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ec407a;
+    background: rgba(236, 64, 122, 0.15);
+    border: 2px solid rgba(236, 64, 122, 0.4);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Result */
+.result-section {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(142, 36, 170, 0.25);
+    border: 1px solid rgba(171, 71, 188, 0.4);
+    transition: background 0.3s ease;
+}
+
+.result-section.win {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+.result-section.lose {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.result-section.draw {
+    background: rgba(234, 179, 8, 0.2);
+    border-color: rgba(234, 179, 8, 0.5);
+}
+
+#winner {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.result-detail {
+    font-size: 0.95rem;
+    color: #d1d5db;
+    margin-top: 6px;
     font-weight: 300;
 }
-#Rock, #Paper, #Scissor{
-    width: 60px;
-    height: 60px;
-    border: 0px transparent;
-    border-radius: 50% !important;
-    transition:  transform .2s;
-    margin: 20px !important;
-    font-size: 0px !important;
-    background-repeat: no-repeat;
-    background-size: 60px 60px;
+
+/* Score board */
+.score-board {
+    width: 100%;
+    background: rgba(236, 64, 122, 0.15);
+    border: 1px solid rgba(236, 64, 122, 0.35);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
 }
-#Rock{
-    background-image: url(icons8-hand-rock-100.png);
+
+.score-board h2 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
 }
-#Paper{
-    background-image: url(icons8-hand-100.png);
+
+.score-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    margin-bottom: 12px;
 }
-#Scissor{
-    background-image: url(icons8-hand-scissors-100.png);
+
+.score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
 }
-button:hover{
-    transform:  scale(1.5);
-    border: 1px solid black;
+
+.score-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a78bfa;
 }
-button img{
-    width: 60px;
-    height: 60px;
+
+.score-item.draw .score-label {
+    color: #fbbf24;
 }
-#score-board, #result{
-    background-color:#ec407a ;
-    color: white;
-    margin: 2%;
-    padding: 1%;
+
+.score-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
 }
-#result{
-    background-color:#8E24AA;
+
+.rounds-played {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.rounds-played span {
+    color: #a78bfa;
+    font-weight: 600;
+}
+
+/* Reset button */
+.reset-btn {
+    background: transparent;
+    border: 2px solid rgba(236, 64, 122, 0.6);
+    border-radius: 50px;
+    color: #ec407a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 32px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reset-btn:hover {
+    background: rgba(236, 64, 122, 0.15);
+    box-shadow: 0 0 16px rgba(236, 64, 122, 0.4);
+}
+
+/* Bounce animation for choices */
+@keyframes bounce-in {
+    0%   { transform: scale(0.5); opacity: 0; }
+    70%  { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.choice-icon.animate {
+    animation: bounce-in 0.35s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .game-title { font-size: 1.6rem; }
+    .choices button img { width: 48px; height: 48px; }
+    .score-value { font-size: 2rem; }
 }
