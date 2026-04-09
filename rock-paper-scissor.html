@@ -4,44 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper & Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="rock-paper-scissor.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="r-pp-sc.js" defer></script>
-    </script>
 </head>
-<body class="bg-color">
-    <div class="d-flex justify-content-center game-title">
-        <h1>Rock, Paper and Scissor Game!</h1>
+<body>
+    <div class="game-wrapper">
+        <header>
+            <h1 class="game-title">Rock, Paper &amp; Scissors</h1>
+            <p class="subtitle">Choose your weapon</p>
+        </header>
+
+        <section class="choices" id="optionSelection">
+            <button id="Rock" title="Rock" aria-label="Rock">
+                <img src="icons8-hand-rock-100.png" alt="Rock">
+                <span>Rock</span>
+            </button>
+            <button id="Paper" title="Paper" aria-label="Paper">
+                <img src="icons8-hand-100.png" alt="Paper">
+                <span>Paper</span>
+            </button>
+            <button id="Scissor" title="Scissors" aria-label="Scissors">
+                <img src="icons8-hand-scissors-100.png" alt="Scissors">
+                <span>Scissors</span>
+            </button>
+        </section>
+
+        <section class="versus-display" id="versusDisplay">
+            <div class="choice-card">
+                <p class="choice-label">Computer</p>
+                <div class="choice-icon" id="computerChoiceIcon">❓</div>
+                <p class="choice-name" id="computerChoice">Waiting...</p>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="choice-card">
+                <p class="choice-label">You</p>
+                <div class="choice-icon" id="playerChoiceIcon">❓</div>
+                <p class="choice-name" id="playerChoice">Waiting...</p>
+            </div>
+        </section>
+
+        <section class="result-section" id="result">
+            <p id="winner">Make your move!</p>
+            <p id="result-detail" class="result-detail"></p>
+        </section>
+
+        <section class="score-board" id="score-board">
+            <h2>Score Board</h2>
+            <div class="score-row">
+                <div class="score-item">
+                    <p class="score-label">Computer</p>
+                    <p class="score-value" id="computerScore">0</p>
+                </div>
+                <div class="score-item draw">
+                    <p class="score-label">Draws</p>
+                    <p class="score-value" id="drawScore">0</p>
+                </div>
+                <div class="score-item">
+                    <p class="score-label">You</p>
+                    <p class="score-value" id="playerScore">0</p>
+                </div>
+            </div>
+            <p class="rounds-played">Rounds played: <span id="roundCount">0</span></p>
+        </section>
+
+        <button class="reset-btn" id="resetBtn">Reset Game</button>
     </div>
-    <div class="d-flex justify-content-center" id="optionSelection">
-        <button id="Rock">Rock</button>
-        <button id="Paper">Paper</button>
-        <button id="Scissor">Scissor</button>
-    </div>
-    <div class="d-flex justify-content-center game-title">
-        <h1 class="col-6 d-flex justify-content-center">Computer Choice</h1>
-        <h1 class="col-6 d-flex justify-content-center">Player Choice</h1>
-    </div>
-    <div class="d-flex justify-content-center game-title">
-        <h2 id="computerChoice" class="col-6 d-flex justify-content-center"></h2>
-        <h2 id="playerChoice" class="col-6 d-flex justify-content-center"></h2>
-    </div>
-    <div class="d-flex justify-content-center" id="result">
-        <h3 id="winner">Result</h3>
-    </div>
-    <div class="justify-content-center" id="score-board">
-        <div class="row">
-            <h3 class="text-center">Score Board</h3>
-        </div>
-        <div class="row">
-            <h4 class="col-6 d-flex justify-content-center">Computer Score</h4>
-            <h4 class="col-6 d-flex justify-content-center">Player Score</h4>
-        </div>
-        <div class="row">
-            <h5 class="col-6 d-flex justify-content-center" id="computerScore"></h5>
-            <h5 class="col-6 d-flex justify-content-center" id="playerScore"></h5>
-        </div>
-    </div>
+    <script src="r-pp-sc.js"></script>
 </body>
 </html>
