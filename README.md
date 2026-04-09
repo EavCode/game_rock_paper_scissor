@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+# Rock, Paper & Scissors
 
-You can use the [editor on GitHub](https://github.com/EavCode/game_rock_paper_scissor/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+A clean, modern browser-based Rock Paper Scissors game built with vanilla HTML, CSS, and JavaScript.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Features
 
-### Markdown
+- **Animated choices** — emoji icons bounce in after each pick (✊ ✋ ✌️)
+- **Colour-coded results** — result panel turns green on a win, red on a loss, yellow on a draw
+- **Full score tracking** — separate counters for Player wins, Computer wins, and Draws
+- **Round counter** — tracks how many rounds have been played
+- **Reset button** — clears all scores and resets the board
+- **Descriptive outcomes** — tells you exactly why you won or lost (e.g. "Rock crushes Scissors!")
+- **Responsive design** — works on desktop and mobile
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## How to Play
 
-```markdown
-Syntax highlighted code block
+1. Click **Rock**, **Paper**, or **Scissors**
+2. The computer picks randomly
+3. The result and scores update instantly
+4. Hit **Reset Game** to start over
 
-# Header 1
-## Header 2
-### Header 3
+## Tech Stack
 
-- Bulleted
-- List
+| Layer | Detail |
+|---|---|
+| HTML | Semantic HTML5 |
+| CSS | Custom CSS with CSS variables, flexbox, `@keyframes` animations |
+| JavaScript | Vanilla ES6+ (no frameworks) |
+| Font | [Poppins](https://fonts.google.com/specimen/Poppins) via Google Fonts |
 
-1. Numbered
-2. List
+## Project Structure
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+game_rock_paper_scissor/
+├── index.html                  # Main entry point
+├── rock-paper-scissor.html     # Game page
+├── rock-paper-scissor.css      # All styles
+├── r-pp-sc.js                  # Game logic
+├── icons8-hand-rock-100.png    # Rock icon
+├── icons8-hand-100.png         # Paper icon
+├── icons8-hand-scissors-100.png# Scissors icon
+└── _config.yml                 # GitHub Pages config
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Live Demo
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/EavCode/game_rock_paper_scissor/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Hosted on GitHub Pages: [https://eavcode.github.io/game_rock_paper_scissor](https://eavcode.github.io/game_rock_paper_scissor)
